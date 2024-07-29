@@ -18,12 +18,14 @@ body, html {
 .buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width: 5%;
-    min-width: 150px; 
+    width: 8%;
+    min-width: 100px;
     background-color: #2d3699;
     padding: 2px;
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* Adjust this value to match the footer height */
 }
 
 .frame {
@@ -33,6 +35,8 @@ body, html {
     align-items: center;
     padding: 10px;
     width: 100%;
+    overflow: auto;
+    height: calc(100vh - 60px); /* Adjust this value to match the footer height */
 }
 
 .frame iframe {
@@ -44,10 +48,10 @@ body, html {
     background-color: #1c56d5;
     padding: 2px;
     text-align: center;
-}
-
-.container > .frame, .container > .footer {
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 60px; /* Adjust this value to set the footer height */
 }
 
 img {
@@ -66,13 +70,7 @@ img {
     }
 
     .frame {
-        width: 95%;
-       
-    }
-
-    .footer {
-        width: 100%;
-        position: fixed;
-        bottom: 0;
+        width: 92%;
+        height: calc(100vh - 60px); /* Adjust this value to match the footer height */
     }
 }
